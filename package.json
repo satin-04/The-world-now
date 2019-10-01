@@ -19,12 +19,12 @@
   },
   "homepage": "https://github.com/satin-99/Test#readme",
   "dependencies": {
-    "axios": "^0.18.0",
-    "express": "^4.16.4",
+    "axios": "^0.18.1",
+    "express": "^4.17.1",
     "express-handlebars": "^3.0.0",
-    "path": "^0.12.7",
-    "request": "^2.88.0",
+    "handlebars": "^4.0.12",
     "hbs": "^4.0.1",
-    "handlebars": "^4.0.12"
+    "path": "^0.12.7",
+    "request": "^2.88.0"
   }
 }

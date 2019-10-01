@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>The_World_Now</title>
+	<meta name="viewport" content="width=device-width, initial-scale=0.86, maximum-scale=3.0, minimum-scale=0.86">
+
+	<style type="text/css">
+	* {
+			box-sizing: border-box;
+		}
+		.nav ul {
+			display: grid;
+			grid-gap: 0px;
+			grid-template-columns: repeat(8,1fr);
+			padding: 0px;
+			list-style: none;
+			text-align: center;
+			border: 1px solid red;
+			border-top: none;
+		}
+		ul {
+			margin: 0px;
+		}
+		.nav ul li {
+			text-align: center;
+			padding: 15px;
+			text-align: center;
+			cursor: pointer;
+			color: aqua;
+			font-size: 1.2em;
+
+		}
+		.nav {
+			background-color: black;
+		}
+		.nav ul form:hover {
+			background-color: aqua;
+			color: black;
+			font-weight: bolder;
+
+		}
+		.nav ul form {
+			border: 1px solid red;
+			border-top: none;
+			padding: 0px;
+
+		}
+		.nav ul li:hover {
+
+			color: black;
+			font-weight: bolder;
+		}
+		.nav button {
+			/* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+
+			background-color: transparent;
+			outline: none;
+			border: 0px;
+			cursor: pointer;
+
+		}
+		#container {
+			margin: 5%;
+		}
+		#content {
+			padding: 2%;
+		}
+		/* #left {
+			width: 70%;
+		} */
+		#image img {
+			width: 700px;
+			height: 400px;
+			border-radius: 10%;
+		}
+		#image {
+			text-align: center;
+		}
+		#title {
+			font-size: 1.5em;
+			font-weight: bold;
+		}
+		#left {
+			padding: 2%;
+			border-radius: 10%;
+			background-color: #ffff;
+			margin-top: 20px;
+		}
+		#box {
+			border: 0px solid;
+			border-radius: 30%;
+			padding: 0%;
+		}
+		#name {
+			text-decoration: none;
+			font-weight: bold;
+			color: black;
+		}
+		header {
+			padding: 1%;
+			text-align: center;
+			background-color: black;
+			color: aqua;
+			font-size: 4em;
+			font-weight: bold;
+			border: 2px solid red;
+		}
+		body {
+			background-color: #EFF0F1;
+			margin: 0px;
+		}
+
+		#sel {
+			float: right;
+			background-color: black;
+			color: aqua;
+			appearance: none;
+			line-height: 20;
+			outline: 0;
+			margin-top: 20px;
+			margin-right: 10px;
+			font-size: 0.3em;
+			width: 20px;
+		}
+		#content {
+			padding: 2%;
+			/* background-color: papayawhip; */
+			border-radius: 10%;
+			letter-spacing: 1px;
+			word-spacing: 2px;
+			justify-content: center;
+		}
+		#last {
+			text-align: center;
+			padding: 2%;
+			font-size: 1.2em;
+		}
+		#search {
+			
+		}
+
+input.rounded {
+	border: 1px solid #ccc;
+	-moz-border-radius: 10px;
+	-webkit-border-radius: 10px;
+	border-radius: 10px;
+	-moz-box-shadow: 2px 2px 3px #666;
+	-webkit-box-shadow: 2px 2px 3px #666;
+	box-shadow: 2px 2px 3px #666;
+	font-size: 20px;
+	padding: 4px 7px;
+	outline: 0;
+	-webkit-appearance: none;
+}
+input.rounded:focus {
+	border-color: #339933;
+}
+
+		@media only screen and (max-width: 768px) {
+
+			.nav ul {
+				display: grid;
+				grid-gap: 0px;
+				grid-template-columns: repeat(3,1fr);
+				padding: 0px;
+				list-style: none;
+				text-align: center;
+				border: 1px solid red;
+				border-top: none;
+			}
+		#image img {
+				width: 350px;
+				height: 300px;
+				border-radius: 10%;
+			}
+
+		}
+	</style>
+
+	<script>
+
+	</script>
+
+</head>
+<body>
+				<header>
+					<span ><form action="/" method="GET">
+						 <select name="country" onchange="this.form.submit()" id="sel">
+							<option value="">COUNTRY</option>
+							<option value="AR">Argentina</option>
+							<option value="AU">Australia</option>
+							<option value="AT">Austria</option>
+							<option value="BE">Belgium</option>
+							<option value="BR">Brazil</option>
+							<option value="BG">Bulgaria</option>
+							<option value="CA">Canada</option>
+							<option value="CN">China</option>
+							<option value="CO">Colombia</option>
+							<option value="CU">Cuba</option>
+							<option value="CZ">Czech Republic</option>
+							<option value="EG">Egypt</option>
+							<option value="FR">France</option>
+							<option value="DE">Germany</option>
+							<option value="GR">Greece</option>
+							<option value="HK">Hong Kong</option>
+							<option value="HU">Hungary</option>
+							<option value="IN">India</option>
+							<option value="IE">Ireland</option>
+							<option value="IL">Israel</option>
+							<option value="IT">Italy</option>
+							<option value="JP">Japan</option>
+							<option value="KR">Korea, Republic of</option>
+							<option value="LV">Latvia</option>
+							<option value="LT">Lithuania</option>
+							<option value="MY">Malaysia</option>
+							<option value="MX">Mexico</option>
+							<option value="MA">Morocco</option>
+							<option value="NL">Netherlands</option>
+							<option value="NZ">New Zealand</option>
+							<option value="NG">Nigeria</option>
+							<option value="NO">Norway</option>
+							<option value="PH">Philippines</option>
+							<option value="PL">Poland</option>
+							<option value="PT">Portugal</option>
+							<option value="RO">Romania</option>
+							<option value="RU">Russian Federation</option>
+							<option value="SA">Saudi Arabia</option>
+							<option value="RS">Serbia</option>
+							<option value="SG">Singapore</option>
+							<option value="SK">Slovakia</option>
+							<option value="SI">Slovenia</option>
+							<option value="ZA">South Africa</option>
+							<option value="SE">Sweden</option>
+							<option value="CH">Switzerland</option>
+							<option value="TW">Taiwan, Province of China</option>
+							<option value="TH">Thailand</option>
+							<option value="TR">Turkey</option>
+							<option value="UA">Ukraine</option>
+							<option value="GB">United Kingdom</option>
+							<option value="US">United States</option>
+							<option value="VE">Venezuela, Bolivarian Republic</option>
+							</select>
+					</form></span>
+
+					The World Now</header>
+
+
+	<div class="nav">
+		<ul>
+			<form action="/" method="get">
+				<button><li>Headlines</li></button></form>
+
+			<form action="/business" method="get">
+			<button><li>Business</li></button></form>
+
+			<form action="/entertainment" method="get">
+			<button><li>Entertainment</li></button></form>
+
+			<form action="/general" method="get">
+			<button><li>General</li></button></form>
+
+			<form action="/health" method="get">
+			<button><li>Health</li></button></form>
+
+			<form action="/science" method="get">
+			<button><li>Science</li></button></form>
+
+			<form action="/sports" method="get">
+				<button><li>Sports</li></button></form>
+
+			<form action="/technology" method="get">
+				<button><li>Technology</li></button></form>
+			</ul>
+			</div>
+
+<div style="text-align:center;margin-top: 10px;">
+	<form action="/search" method="get">
+		<input type="text" name="name" style="width:30%;text-align: center" class="rounded">
+		<button id="search">
+			Search
+			<!-- <img src="search.svg" style="width:20px;height:23px;margin-top:-3px"> -->
+		</button>
+	</form>
+</div>
+<div id="container">
+	  {{# each jobs}}
+<div id="box">
+<div id="left">
+	<div id="image"><img src="{{this.urlToImage}}" onerror="this.style.display='none'"></div>
+<br>
+	<div id="content">
+	  <div id="title">{{this.title}}</div>
+	  <div id="desc">{{this.description}}</div>
+
+		<div id="cont">{{this.content}}</div>
+		<div><a href="{{this.url}}">Read More</a></div>
+	</div>
+	</div>
+	</div>
+	  {{/each}}
+</div>
+</div>
+</div>
+<div id="last"> Made with &#10084; <a href="https://github.com/satin-04" id="name">Satin Jain</a></div>
+</body>
+</html>
